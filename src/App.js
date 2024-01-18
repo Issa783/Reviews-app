@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import  React, { useState } from "react";
+import styles from "./styles.module.css"
+import Reviews from "./Components/Reviews";
+import people from "./data"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <section className={styles.container}>
+        <div className={styles.title}>
+          <h2>Our Reviews</h2>
+          <div className={styles.underline}></div>
+        </div>
+        <Reviews />
+      </section>
+    </main>
+   
+  )
 }
 
 export default App;
